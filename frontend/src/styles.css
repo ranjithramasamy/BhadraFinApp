@@ -8,100 +8,102 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   min-height: 100vh;
-  background: #e2e2e2;
 }
 
-.font-italic {
+.logo-font-italic {
   font-family: 'Lobster', cursive;
 }
 
-.app-header {
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
-  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
-}
-
-.login-wrapper {
+.login-wrapper-root {
   height: 100%;
-}
-
-.box {
-  position: relative;
-  top: 0;
-  opacity: 1;
-  float: left;
-  padding: 60px 50px 40px 50px;
   width: 100%;
-  background: #fff;
-  border-radius: 10px;
-  transform: scale(1);
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  z-index: 5;
-  max-width: 330px;
 }
 
-.box.back {
-  transform: scale(.95);
-  -webkit-transform: scale(.95);
-  -ms-transform: scale(.95);
-  top: -20px;
-  opacity: .8;
-  z-index: -1;
-}
-
-.box:before {
-  content: "";
+.login-background {
   width: 100%;
-  height: 30px;
-  border-radius: 10px;
+  height: 100%;
+  background-color: #fff;
+}
+
+.login-background:after {
+  content: ' ';
+  border-top: 100vh solid #7c7af3;
+  border-right: 60vw solid transparent;
+  width: 0;
   position: absolute;
-  top: -10px;
-  background: rgba(255, 255, 255, .6);
-  left: 0;
-  transform: scale(.95);
-  -webkit-transform: scale(.95);
-  -ms-transform: scale(.95);
-  z-index: -1;
 }
 
-.login-wrapper .example-form {
-  min-width: 100%;
-  max-width: 300px;
+.login-content {
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  align-items: center;
+  align-content: space-around;
+  justify-content: space-around;
 }
 
-.login-wrapper .input-full-width,
-.login-wrapper .btn-block {
+.login-text-content {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px;
+  padding-top: 40px;
+}
+
+.app-detail-label {
   width: 100%;
-}
-
-.login-wrapper mat-card-header {
-  text-align: center;
-  width: 100%;
-  display: block;
-  font-weight: 700;
-}
-
-.login-wrapper mat-card-header mat-card-title {
+  font-weight: 300;
   font-size: 30px;
-  margin: 0;
+  color: #ededf6;
 }
 
-.login-wrapper .mat-card {
-  padding: 40px 70px 50px;
+.login-form-content {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.login-wrapper .mat-stroked-button {
-  border: 1px solid currentColor;
+.login-form-content-header {
+  font-weight: 300;
+  font-size: 30px;
+  color: #706edb;
+}
+
+.login-form-element {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.login-content .form-input {
+  width: 100%;
+}
+
+.login-content .signin-button {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.login-content .mat-raised-button {
   line-height: 54px;
-  background: #FFF7FA;
+  background: #706edb;
 }
 
-.login-wrapper .mat-form-field-appearance-legacy .mat-form-field-infix {
-  padding: 0.8375em 0;
+.login-form-register-link {
+  font-weight: 500;
+  font-size: 15px;
+  color: #706edb;
+}
+
+.login-form-no-account-label {
+  font-weight: 300;
+  font-size: 15px;
+  color: #6c6e83;
 }

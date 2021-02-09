@@ -1,3 +1,4 @@
+<!-- <div class="login-wrapper-img">
 <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
 
   <mat-card class="box">
@@ -5,7 +6,7 @@
       <mat-card-title>Log in</mat-card-title>
     </mat-card-header>
 
-    <form class="example-form">
+    <form class="form-element">
       <mat-card-content>
         <mat-form-field class="input-full-width">
           <input matInput placeholder="Username">
@@ -19,4 +20,78 @@
     </form>
   </mat-card>
 
+</div>
+</div>
+-->
+
+
+
+<!-- <div class="login-wrapper-root">
+  <div class="login-background"></div>
+
+  <div class="login-content">
+    <div class="login-text-content"> Left </div>
+    <div class="login-form-content">
+      <mat-card class="login-mat-card">
+        <mat-card-header>
+          <mat-card-title>Hello there!</mat-card-title>
+          <mat-card-title>Welcome Back</mat-card-title>
+        </mat-card-header>
+
+        <form class="form-element">
+          <mat-card-content>
+            <mat-form-field class="input-full-width">
+              <mat-label>Username</mat-label>
+              <mat-icon matPrefix>account_box</mat-icon>
+              <span matPrefix>&nbsp;</span>
+              <input matInput class="login-mat-input">
+            </mat-form-field>
+
+            <mat-form-field class="input-full-width">
+              <mat-icon matPrefix>mail_outline</mat-icon>
+              <span matPrefix>&nbsp;</span>
+              <input matInput placeholder="Password">
+            </mat-form-field>
+          </mat-card-content>
+          <button mat-raised-button color="primary" class="btn-login">Sign in</button>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+</div>
+-->
+
+
+<div class="login-wrapper-root">
+  <div class="login-background"></div>
+
+  <div class="login-content">
+    <div class="login-text-content">
+      <span class="app-detail-label">Hello there!</span>
+      <span class="app-detail-label">Welcome Back</span>
+    </div>
+    <div class="login-form-content">
+      <span class="login-form-content-header">Hello there!</span>
+      <span class="login-form-content-header">Welcome Back</span>
+
+      <form class="login-form-element">
+          <mat-form-field class="form-input">
+            <mat-label>Username</mat-label>
+            <mat-icon matPrefix>account_box</mat-icon>
+            <span matPrefix>&nbsp;</span>
+            <input matInput class="login-mat-input">
+          </mat-form-field>
+
+          <mat-form-field class="form-input">
+            <mat-icon matPrefix>mail_outline</mat-icon>
+            <span matPrefix>&nbsp;</span>
+            <input matInput placeholder="Password">
+          </mat-form-field>
+
+        <button mat-raised-button color="primary" class="signin-button">Sign in</button>
+      </form>
+
+      <span class="login-form-no-account-label">Don't have an account? <a class="login-form-register-link">Register</a></span>
+    </div>
+  </div>
 </div>

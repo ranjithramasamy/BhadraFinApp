@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CommonService} from '../../shared/services/common.service';
 
 @Component({
   selector: 'app-register',
@@ -7,11 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  Roles: any = ['Admin', 'Author', 'Reader'];
-
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor( private commonService: CommonService ) {
+    this.commonService.getWorkChatSvgIcon();
   }
 
+  ngOnInit(): void { }
 }

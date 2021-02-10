@@ -1,34 +1,61 @@
-<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
-  <mat-card class="box">
-    <mat-card-header>
-      <mat-card-title>Register</mat-card-title>
-    </mat-card-header>
+<div class="register-wrapper">
+  <div class="register-app-detail-wrapper">
+    <div>
+      <span class="register-app-logo">Bhadra FinApp</span><br><br>
+      <span class="register-app-description">Comes up with intuitive design by using the next generation design principles and techniques...</span>
+    </div>
 
-    <form class="form-element">
-      <mat-card-content>
-        <mat-form-field class="input-full-width">
-          <input matInput placeholder="Username">
+    <mat-icon svgIcon="work_chat"></mat-icon>
+  </div>
+
+  <div class="register-form-wrapper">
+    <span class="register-form-header">Hello, Lets Begin!</span>
+
+    <form class="register-form-element">
+      <div fxLayout="row" fxLayoutGap="20px">
+        <mat-form-field class="form-input">
+          <mat-label>First Name</mat-label>
+          <mat-icon matPrefix>account_circle</mat-icon>
+          <span matPrefix>&nbsp;</span>
+          <input matInput class="register-mat-input">
         </mat-form-field>
 
-        <mat-form-field class="input-full-width">
-          <input matInput placeholder="Email">
+        <mat-form-field class="form-input">
+          <mat-label>Last Name</mat-label>
+          <mat-icon matPrefix>account_circle</mat-icon>
+          <span matPrefix>&nbsp;</span>
+          <input matInput class="register-mat-input">
         </mat-form-field>
+      </div>
+      <mat-form-field class="form-input">
+        <mat-label>Username</mat-label>
+        <mat-icon matPrefix>account_box</mat-icon>
+        <span matPrefix>&nbsp;</span>
+        <input matInput class="register-mat-input">
+      </mat-form-field>
 
-        <mat-form-field class="input-full-width">
-          <input matInput placeholder="Password">
-        </mat-form-field>
+      <mat-form-field class="form-input">
+        <mat-icon matPrefix>dialpad</mat-icon>
+        <span matPrefix>&nbsp;</span>
+        <input matInput placeholder="Password">
+      </mat-form-field>
 
-        <mat-form-field class="input-full-width">
-          <mat-label>Choose a role...</mat-label>
-          <mat-select>
-            <mat-option [value]="roles" *ngFor="let roles of Roles">{{roles}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
+      <mat-form-field class="form-input">
+        <mat-icon matPrefix>alternate_email</mat-icon>
+        <span matPrefix>&nbsp;</span>
+        <input matInput placeholder="Email">
+      </mat-form-field>
 
-      </mat-card-content>
-
-      <button mat-stroked-button color="accent" class="btn-block">Register</button>
+      <mat-form-field class="form-input">
+        <mat-icon matPrefix>phone</mat-icon>
+        <span matPrefix>&nbsp;</span>
+        <input matInput placeholder="Mobile No">
+      </mat-form-field>
+      <button mat-raised-button color="primary" class="register-button">Register</button>
     </form>
-  </mat-card>
+
+    <span class="register-form-no-account-text">
+      Already have an account? <a routerLink="/login" routerLinkActive="active" class="register-form-register-link">Sing in</a>
+    </span>
+  </div>
 </div>

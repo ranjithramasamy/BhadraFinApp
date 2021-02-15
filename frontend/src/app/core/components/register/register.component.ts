@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {CommonService} from '../../shared/services/common.service';
+import { DomSanitizer, SafeHtml} from '@angular/platform-browser';
+import {CommonAuthService} from '../../services/common.auth.service';
 
 @Component({
   selector: 'app-register',
@@ -8,8 +9,11 @@ import {CommonService} from '../../shared/services/common.service';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor( private commonService: CommonService ) {
-    this.commonService.getWorkChatSvgIcon();
+  appDescription: SafeHtml = '';
+
+  constructor( private commonService: CommonAuthService,
+               private domSanitizer: DomSanitizer ) {
+    this.appDescription = domSanitizer.bypassSecurityTrustHtml(this.commonService.getAppDescriptionTemplate());
   }
 
   ngOnInit(): void { }

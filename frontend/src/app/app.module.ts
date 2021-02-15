@@ -20,13 +20,17 @@ import { AppRoutingModule } from './app.routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './core/components/login/login.component';
 import { RegisterComponent } from './core/components/register/register.component';
-import { CommonService } from './core/shared/services/common.service';
+import { CommonAuthService } from './core/services/common.auth.service';
+import { HomeComponent } from './features/home/home.component';
+import { NotFoundComponent } from './core/components/notfound/notfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    HomeComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,7 @@ import { CommonService } from './core/shared/services/common.service';
     AngularMaterialModule,
     AppRoutingModule,
   ],
-  providers: [CommonService],
+  providers: [CommonAuthService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

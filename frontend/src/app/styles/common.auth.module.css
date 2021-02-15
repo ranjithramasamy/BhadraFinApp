@@ -1,3 +1,24 @@
+.auth-page-description {
+  width: 100%;
+  font-weight: 150;
+  font-size: 15px;
+  color: #ededf6;
+}
+
+.auth-page-logo {
+  font-weight: 250;
+  font-size: 30px;
+  color: #ededf6;
+}
+
+.auth-page-work-chat-svg-background {
+  background-image: url('../../assets/work-chat.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 75%;
+}
+
 .login-wrapper, .register-wrapper {
   width: 100%;
   height: 100%;
@@ -18,25 +39,6 @@
   background: linear-gradient(45deg, rgba(45,2,113,1) 0%, rgba(76,2,189,1) 68%, rgba(103,2,255,1) 100%);
   border-top-right-radius:1%;
   border-bottom-right-radius:35%;
-}
-
-.login-app-description, .register-app-description {
-  width: 100%;
-  font-weight: 150;
-  font-size: 15px;
-  color: #ededf6;
-}
-
-.login-app-logo, .register-app-logo {
-  font-weight: 250;
-  font-size: 30px;
-  color: #ededf6;
-}
-
-.login-app-detail-wrapper .mat-icon,
-.register-app-detail-wrapper .mat-icon{
-  height: 75%;
-  width: 80%;
 }
 
 .login-form-wrapper, .register-form-wrapper {

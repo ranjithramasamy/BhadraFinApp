@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MatIconRegistry } from '@angular/material/icon';
-import { DomSanitizer } from '@angular/platform-browser';
-import {CommonService} from '../../shared/services/common.service';
+import { DomSanitizer, SafeHtml} from '@angular/platform-browser';
+import {CommonAuthService} from '../../services/common.auth.service';
 
 @Component({
   selector: 'app-login',
@@ -10,8 +9,11 @@ import {CommonService} from '../../shared/services/common.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor( private commonService: CommonService ) {
-    this.commonService.getWorkChatSvgIcon();
+  appDescription: SafeHtml = '';
+
+  constructor( private commonService: CommonAuthService,
+               private domSanitizer: DomSanitizer) {
+    this.appDescription = domSanitizer.bypassSecurityTrustHtml(this.commonService.getAppDescriptionTemplate());
   }
 
   ngOnInit(): void { }

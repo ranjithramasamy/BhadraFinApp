@@ -18,19 +18,14 @@ import { AppRoutingModule } from './app.routing.module';
 
 /* App Components */
 import { AppComponent } from './app.component';
-import { LoginComponent } from './core/components/login/login.component';
-import { RegisterComponent } from './core/components/register/register.component';
 import { CommonAuthService } from './core/services/common.auth.service';
-import { HomeComponent } from './features/home/home.component';
-import { NotFoundComponent } from './core/components/notfound/notfound.component';
+import { HomeComponent } from './modules/home/home.component';
+import {AuthModule} from './modules/authentication/auth.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegisterComponent,
-    HomeComponent,
-    NotFoundComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +36,7 @@ import { NotFoundComponent } from './core/components/notfound/notfound.component
     ReactiveFormsModule,
     AngularMaterialModule,
     AppRoutingModule,
+    AuthModule
   ],
   providers: [CommonAuthService],
   bootstrap: [AppComponent],

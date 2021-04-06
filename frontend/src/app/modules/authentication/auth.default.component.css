@@ -1,0 +1,38 @@
+.auth-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.auth-detail-wrapper {
+  height: 100%;
+  width: 55%;
+  background: linear-gradient(45deg, rgba(45,2,113,1) 0%, rgba(76,2,189,1) 68%, rgba(103,2,255,1) 100%);
+  border-top-right-radius:1%;
+  border-bottom-right-radius:35%;
+}
+
+.auth-page-description {
+  width: 100%;
+  font-weight: 150;
+  font-size: 15px;
+  color: #ededf6;
+}
+
+.auth-page-logo {
+  font-weight: 250;
+  font-size: 30px;
+  color: #ededf6;
+}
+
+.auth-page-work-chat-svg-background {
+  background-image: url('../../../assets/work-chat.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 75%;
+}
+
+.auth-router-content {
+  width: 45%;
+  height: 100%;
+}

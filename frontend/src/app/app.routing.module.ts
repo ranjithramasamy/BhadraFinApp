@@ -1,20 +1,43 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './core/components/login/login.component';
-import { RegisterComponent } from './core/components/register/register.component';
-import { HomeComponent } from './features/home/home.component';
-import { NotFoundComponent } from './core/components/notfound/notfound.component';
+import { RouterModule, Routes } from '@angular/router';
+import { SignInComponent } from './modules/authentication/signin/signin.component';
+import { RegisterComponent } from './modules/authentication/register/register.component';
+import { HomeComponent } from './modules/home/home.component';
+import { PageNotFoundComponent } from './shared/components/pagenotfound/pagenotfound.component';
+import { AuthDefaultComponent } from './modules/authentication/auth.default.component';
+import { AuthModule } from './modules/authentication/auth.module';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'login' },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'home', component: HomeComponent },
-  { path: '**', component: NotFoundComponent }
+  {
+    path: '',
+    component: AuthDefaultComponent,
+    children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'signin'
+      },
+      {
+        path: 'signin',
+        component: SignInComponent
+      },
+      {
+        path: 'register',
+        component: RegisterComponent
+      }]
+  },
+  {
+    path: 'home',
+    component: HomeComponent
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), AuthModule],
   exports: [RouterModule]
 })
 

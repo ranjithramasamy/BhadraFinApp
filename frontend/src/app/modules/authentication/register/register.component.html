@@ -1,0 +1,50 @@
+<div class="register-form-wrapper">
+  <span class="register-form-header">Hello, Lets Begin!</span>
+
+  <form class="register-form-element">
+    <div fxLayout="row" fxLayoutGap="20px">
+      <mat-form-field class="form-input">
+        <mat-label>First Name</mat-label>
+        <mat-icon matPrefix>account_circle</mat-icon>
+        <span matPrefix>&nbsp;</span>
+        <input matInput class="register-mat-input">
+      </mat-form-field>
+
+      <mat-form-field class="form-input">
+        <mat-label>Last Name</mat-label>
+        <mat-icon matPrefix>account_circle</mat-icon>
+        <span matPrefix>&nbsp;</span>
+        <input matInput class="register-mat-input">
+      </mat-form-field>
+    </div>
+    <mat-form-field class="form-input">
+      <mat-label>Username</mat-label>
+      <mat-icon matPrefix>account_box</mat-icon>
+      <span matPrefix>&nbsp;</span>
+      <input matInput class="register-mat-input">
+    </mat-form-field>
+
+    <mat-form-field class="form-input">
+      <mat-icon matPrefix>dialpad</mat-icon>
+      <span matPrefix>&nbsp;</span>
+      <input matInput placeholder="Password">
+    </mat-form-field>
+
+    <mat-form-field class="form-input">
+      <mat-icon matPrefix>alternate_email</mat-icon>
+      <span matPrefix>&nbsp;</span>
+      <input matInput placeholder="Email">
+    </mat-form-field>
+
+    <mat-form-field class="form-input">
+      <mat-icon matPrefix>phone</mat-icon>
+      <span matPrefix>&nbsp;</span>
+      <input matInput placeholder="Mobile No">
+    </mat-form-field>
+    <button mat-raised-button color="primary" class="register-button">Register</button>
+  </form>
+
+  <span class="register-form-no-account-text">
+    Already have an account? <a routerLink="/signin" routerLinkActive="active" class="register-form-register-link">Sing in</a>
+  </span>
+</div>

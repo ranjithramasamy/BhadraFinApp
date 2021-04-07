@@ -1,0 +1,15 @@
+.header-bg {
+  background: linear-gradient(45deg, rgb(45, 2, 113) 0%, rgba(76,2,189,1) 68%, rgb(103, 0, 250) 100%);
+}
+
+.header-mat-icon {
+  color: #f1f1f1;
+}
+
+.header-search-input {
+  width: 250px;
+  height: 35px;
+  border: solid 1px #f1f1f1;
+  border-radius: 20px;
+  background-color: #f1f1f1;
+}

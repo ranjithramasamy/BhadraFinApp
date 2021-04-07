@@ -25,7 +25,7 @@
 }
 
 .auth-page-work-chat-svg-background {
-  background-image: url('../../../assets/work-chat.svg');
+  background-image: url('src/assets/work-chat.svg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 100%;
